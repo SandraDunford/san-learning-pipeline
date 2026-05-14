@@ -1,2 +1,4 @@
 # san_learning_pipeline
-A Personal Analytics Engineering Portfolio Project: A mini ETL pipeline demonstrating end-to-end data engineering skills. This project automates the ingestion of daily learning logs from Excel into a PostgreSQL database, performs data transformation using SQL views (staging layer), and validates data quality. Built to track competency progression through the Benner Novice-to-Expert Model Framework. Tech Stack: Python (pandas, SQLAlchemy), PostgreSQL, SQL (Window Functions, CTE's), Git/Github. Status: Active development.
+A Personal Analytics Engineering Portfolio Project: A mini ETL pipeline demonstrating end-to-end data engineering skills. This project automates the ingestion of daily learning logs from Excel into a PostgreSQL database, performs data transformation using SQL views (staging layer), and validates data quality. Built to track competency progression through the Benner Novice-to-Expert Model Framework. 
+Tech Stack: Python (pandas, SQLAlchemy), PostgreSQL, SQL (Window Functions, CTE's), Git/Github. 
+Status: Active development.
