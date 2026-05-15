@@ -13,7 +13,7 @@ from datetime import datetime
 
 # Database connection details
 DB_USER = 'postgres'
-DB_PASSWORD = 'SeekMeaning7'
+DB_PASSWORD = 'REPLACE_WITH_YOUR_PASSWORD'
 DB_HOST = 'localhost'
 DB_PORT = '5432'
 DB_NAME = 'learning_tracker'
