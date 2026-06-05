@@ -2,8 +2,12 @@
 
 A personal Analytics Engineering portfolio project tracking daily learning progress against the Benner Model (Novice to Expert).
 
+This project demonstrates an end-to-end analytics engineering workflow using a personal learning dataset.
+
+Daily learning activities are recorded in Excel, exported to CSV, loaded into PostgreSQL using Python, validated through staging tables, transformed into analytical structures, and prepared for reporting and analysis.
+
 ## Goal
-Transition from Senior Nurse Leader to Healthcare Analytics Engineer by building and maintaining a mini ETL pipeline.
+Develop skills that support a transition from Senior Nurse Leader to Healthcare Analytics/Data Engineer.
 
 ## Architecture
 This project implements a 3-layer data warehouse pattern:
@@ -14,8 +18,8 @@ This project implements a 3-layer data warehouse pattern:
 ## Tech Stack
 - **Language:** Python 3.x
 - **Database:** PostgreSQL
-- **Tools:** Pandas, SQLAlchemy, Git/GitHub
-- **Data Source:** Daily Learning Logs (CSV)
+- **Tools:** Pandas, SQLAlchemy, Git/GitHub, Excel, VS Code
+- **Data Source:** Daily Learning Logs (CSV) Benner Model (CSV)
 
 ## How to Run
 1. **Update Configuration:** Edit `load_data.py` with your database credentials and file paths.
