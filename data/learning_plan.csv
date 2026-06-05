@@ -1,0 +1,270 @@
+﻿topic_name,stage_name,learning_objective,activities,status,comments
+SQL,Novice,"Understands relational databases, can write basic SQL queries following explicit syntax rules.
+May not yet understand why queries are written a particular way, just follow the rules.","1.  introductory SQL course (PG4E)
+2. Learn what a table, row, column, primary key, and foreign key are and can define each in plain terms.
+3. Write basic SELECT statements with FROM, WHERE, ORDER BY, and LIMIT against a sample database
+4. Practice inserting, updating, and deleting rows using INSERT, UPDATE, DELETE with explicit step-by-step guidance.
+5. Use a sandbox environment (e.g., SQLite, pgAdmin, or DB Fiddle) to execute queries without risk of breaking anything
+6. Memorise the order of SQL execution (FROM > WHERE > GROUP BY > HAVING > ORDER BY) as a rigid rule",Completed,"Confident on all activities, fulfilling the learning objectives for novice level. 
+"
+SQL,Advanced Beginner,"Can combine data from multiple tables and perform aggregations. Begins to recognise different situations require different join types or aggregation approaches, but still relies on learned patterns rather than designing solutions from scratch.","1. Learn and practice INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN, with examples when each is appropriate.
+2. Write aggregation queries using GROUP BY, COUNT(), SUM(), AVG(), MIN(). MAX(), and HAVING.
+3. Work through exercises requiring joins across 3+ tables to answer a single question.
+4. Practice writing subqueries in WHERE and SELECT clauses, recognising them as a pattern for filtering on aggregated results.
+5. Complete intermediate SQL exercises on platforms like LeetCode, HackerRank, or StrataScratch (easy-level problems).
+6. Begin using CASE WHEN for conditional logic — recognise it as SQL's way of handling if/then scenarios.
+7. Learn basic data types (INTEGER, VARCHAR, DATE, TIMESTAMP, BOOLEAN) & why choosing correct type matters for storage & query behaviour.",Early Progress,Beginning advanced beginner learning objectives 03/06/26. Will start by adding aggregation queries and JOINS into daily practice.
+SQL,Competent,Can independently design and write multi-step queries to answer business questions. Understands query performance implications and can troubleshoot failing queries. Sees the relationship between schema design and query complexity — begins to think about how data is structured before writing how to query it.,"1. Learn and use Common Table Expressances (CTEs) with WITH clauses to break complex queries into readable, logical steps.
+2. Write window functions (ROW_NUMBER(), RANK(), LAG(), LEAD(), SUM() OVER()) to solve problems that require row-level context within groups.
+3. Study basic normalisation (1NF, 2NF, 3NF) — understand why data is split across tables rather than stored in one flat sheet.
+4. Practice reading and interpreting entity-relationship diagrams (ERDs) to understand existing database schemas.
+5. Use EXPLAIN or EXPLAIN ANALYZE to inspect query execution plans and identify obvious performance issues (full table scans, missing join conditions).
+6. Build a small relational database schema from scratch (e.g., a clinic booking system with patients, appointments, clinicians, and treatments) and write queries against it.
+7. Learn about constraints (NOT NULL, UNIQUE, FOREIGN KEY, CHECK) and how they enforce data integrity at the database level.
+8. Complete intermediate-to-hard SQL problems on LeetCode or StrataScratch, timing yourself to build fluency.",Not Started,
+SQL,Proficient, Intuitively recognises query patterns and anti-patterns. Can refactor poorly written queries for readability and performance. Anticipates how schema changes will ripple through downstream queries. Begins to see the database not just as a query target but as a system with trade-offs.,"1. Study indexing in depth — understand B-tree indexes, when they help, when they don't, and the write-cost trade-off.
+2. Refactor a set of messy, nested subqueries into clean CTEs and window functions — practice code review on SQL.
+3. Learn about partitioning strategies (range, list, hash) and when they're appropriate for large tables.
+4. Explore query optimisation techniques: materialised views, query rewriting, avoiding SELECT *, predicate pushdown.
+5. Design a schema for a moderately complex domain (e.g., a healthcare analytics platform with patients, episodes, procedures, and outcomes) and justify normalisation decisions.
+6. Investigate locking, concurrency, and transaction isolation levels — understand what happens when multiple processes write simultaneously.
+7. Read and critique SQL from open-source dbt projects or GitHub repositories — identify what's well-written and what could be improved.
+8. Begin mentoring a novice through their first SQL queries — teaching reveals gaps in your own understanding.",Not Started,
+SQL,Expert,"Has deep, intuitive understanding of relational systems. Can diagnose obscure performance issues, design schemas that anticipate years of evolution, and make architectural decisions about when relational is the right choice versus alternatives. Creates standards and methodologies that others follow.","1. Design a production-grade schema for a complex domain with full consideration of normalisation, indexing strategy, partitioning, and future extensibility.
+2. Tune poorly performing queries in a real production environment — use EXPLAIN ANALYZE output to identify and resolve bottlenecks systematically.
+3. Evaluate whether a given workload belongs in a relational database versus a NoSQL/document store/columnar warehouse — make and defend the architectural decision.
+4. Develop SQL style guides and naming conventions for a team — establish standards that improve readability and maintainability across an organisation.
+5. Investigate and resolve deadlocks, race conditions, and data integrity failures in concurrent production systems.
+6. Contribute to or lead database migration projects (e.g., moving from on-premise PostgreSQL to a cloud warehouse) — understand the full scope of compatibility, performance, and behavioural differences.
+7. Mentor proficient practitioners through complex architectural decisions — teach not just how but why.
+8. Stay current with evolving SQL standards and database engine capabilities — evaluate new features (e.g., recursive CTEs, JSONB operators, vector indexes) for practical adoption.",Not Started,
+Data Modeling,Novice,Understands what data modelling is and can identify basic entities and relationships. Follows explicit rules for creating simple entity diagrams without understanding the business rationale behind structural choices.,"1. Complete an introductory course on data modelling fundamentals (e.g., ""Data Modeling"" on Coursera or similar).
+2. Learn the difference between conceptual, logical, and physical data models and when each is used.
+3. Identify entities, attributes, and relationships in simple business scenarios (e.g., patients, appointments, clinicians).
+4. Draw basic entity-relationship diagrams (ERDs) using tools like draw.io or Lucidchart with explicit guidance.
+5. Understand cardinality notation (1:1, 1:N, M:N) and apply it correctly to simple relationship diagrams.
+6. Practice converting a flat spreadsheet into a basic relational structure with separate tables for distinct entities.
+7. Learn the purpose of primary keys and foreign keys and how they connect tables in a diagram.",Early Progress,"1. Not started
+2. Started
+3. Completed
+4. Not started
+5. Not started
+6. Completed
+7. Completed"
+Data Modeling,Advanced Beginner,"Can design simple dimensional models for reporting purposes. Recognises when to use star schema versus snowflake schema based on taught patterns, but still needs guidance for complex scenarios.","Learn the components of a star schema: fact tables, dimension tables, and their relationships.
+Practice distinguishing between fact tables (measurable events) and dimension tables (descriptive context).
+Design simple star schemas for common reporting scenarios (e.g., sales transactions, patient visits).
+Learn about slowly changing dimensions (SCD Type 1 vs Type 2) and when each applies.
+Create snowflake schemas by normalising dimension tables and compare them to star schema equivalents.
+Work through case studies mapping business questions to dimensional model requirements.
+Use modelling tools (e.g., dbdiagram.io, ER/Studio) to build and document simple dimensional models.
+Practice identifying grain of a fact table — the level of detail each row represents.",Not Started,
+Data Modeling,Competent,"Can independently design dimensional models for moderately complex business domains. Understands trade-offs between flexibility, query performance, and maintenance effort. Can justify modelling decisions to stakeholders.","Design a complete dimensional model for a complex domain (e.g., healthcare episode data with admissions, procedures, outcomes).
+Apply SCD Type 2 logic to track historical changes in dimension data over time.
+Create bridge tables to handle many-to-many relationships in dimensional models.
+Learn about degenerate dimensions and when to use them instead of separate dimension tables.
+Design conformed dimensions that can be shared across multiple fact tables for consistency.
+Document data models with clear descriptions, business definitions, and lineage notes.
+Review and critique existing dimensional models — identify weaknesses and propose improvements.
+Practice translating business requirements into dimensional model specifications without direct supervision.",Not Started,
+Data Modeling,Proficient," Intuitively recognises optimal modelling patterns for different analytical use cases. Anticipates how model choices will affect downstream consumption, performance, and maintenance. Can adapt standard patterns to unusual business requirements.","Design hybrid models combining star schema with custom structures for specific analytical needs.
+Evaluate and implement aggregate tables to pre-calculate frequently queried metrics for performance.
+Model temporal data effectively — handling point-in-time queries and historical snapshots.
+Design models that accommodate future business expansion without requiring complete restructuring.
+Implement data vault modelling concepts for highly scalable, auditable data warehouse layers.
+Optimise dimension table sizes through denormalisation strategies where query performance demands it.
+Create model documentation that serves both technical and business audiences effectively.
+Lead modelling reviews for team projects — provide constructive feedback on schema design decisions.",Not Started,
+Data Modeling,Expert,"Has deep, intuitive mastery of data modelling across diverse domains. Creates novel modelling approaches for complex challenges. Establishes organisational modelling standards and mentors others in advanced techniques.","Design enterprise-wide dimensional models that span multiple business units and data sources.
+Develop custom modelling patterns for unique business requirements where standard approaches fail.
+Architect multi-layered data warehouse designs (ODS, staging, core warehouse, mart layers) with clear governance.
+Establish and enforce data modelling standards, naming conventions, and documentation requirements across an organisation.
+Lead migration projects from legacy systems to modern dimensional architectures with minimal disruption.
+Evaluate emerging modelling paradigms (e.g., data mesh, fabric) and determine applicability to organisational needs.
+Mentor proficient practitioners through complex modelling challenges — teach strategic thinking not just techniques.
+Publish or present on data modelling innovations at conferences or within professional communities.",Not Started,
+Github,Novice,"Understands what version control is and can perform basic commands (init, add, commit, push) by following strict step-by-step instructions. Views Git as a ""save button"" rather than a collaboration tool.","1. Complete an introductory Git course (e.g., ""Version Control with Git"" on Coursera or Atlassian's tutorial).
+2. Execute basic commands: git init, git add, git commit, git status, git log.
+3. Create a GitHub account and push a local repository to a remote origin.
+4. Clone an existing public repository and pull changes.",Early Progress,"1. Not started
+2. Started but following insutrctions only
+3. Started"
+Github,Advanced Beginner,Can work with branches for isolated changes and understands the basic flow of merging. Recognises that conflicts exist but needs guidance to resolve them safely.,"Create, switch, and merge branches; manually resolve simple merge conflicts.
+Learn Pull Requests on GitHub: open, request review, and merge via UI.
+Practice undoing mistakes with git reset (soft/mixed/hard) and git revert.
+Configure a .gitignore file to exclude unnecessary files from version control.",Not Started,
+Github,Competent,Can independently manage a collaborative workflow using branching strategies. Understands the implications of history rewriting and can troubleshoot complex merge scenarios. Uses Git as a standard part of the development lifecycle.,"Adopt a branching strategy (e.g., Git Flow or Trunk-Based) for a personal project; practice rebasing.
+Resolve complex merge conflicts and use git reflog to recover lost commits.
+Write conventional commit messages (e.g., feat:, fix:, chore:); use git stash for temporary saves.
+Set up a basic GitHub Action (e.g., linting) on Pull Requests.",Not Started,
+Github,Proficient,"Designs Git workflows balancing speed, stability, and collaboration. Anticipates how team habits affect repository health and enforces quality standards.","Design and document a Git workflow for a team; implement protected branches and required status checks.
+Use interactive rebase (git rebase -i) to squash, reorder, or edit commit history.
+Configure hooks (pre-commit, pre-push) to enforce code quality or security scanning.
+Teach a novice the team's Git workflow and best practices.",Not Started,
+Github,Expert,"Deep mastery of Git internals. Architects enterprise-scale version control strategies, resolves catastrophic issues, and establishes organisational standards.","Architect a multi-repo or mono-repo strategy for a large organisation.
+Recover corrupted repositories or resolve catastrophic merge failures affecting multiple branches.
+Develop and enforce organisation-wide Git policies (branch protection, commit signing, secret scanning).
+Mentor proficient practitioners on advanced Git concepts and troubleshooting.",Not Started,
+dbt,Novice,"Understands what dbt is and can run basic models following step-by-step instructions. Views dbt as ""SQL that runs in order"" without grasping the broader framework.","Complete the dbt Quickstart tutorial (dbt Labs official docs) to build and run your first project.
+Learn dbt project structure: models/, sources.yml, dbt_project.yml, and materialisations (view, table, incremental).
+Write basic SQL models as .sql files and execute dbt run and dbt test.
+Define sources using sources.yml and reference them in models using {{ source() }}.",Early Progress,1. Commenced the dbt labs dbt fundamentals course.
+dbt,Advanced Beginner, Can build multi-model transformation chains and apply basic tests. Recognises that model dependencies matter but still follows learned patterns rather than designing optimal flows.,"Chain models using {{ ref() }} to build staged → intermediate → mart layers.
+Add schema tests (unique, not_null, accepted_values, relationships) and custom singular tests.
+Use Jinja basics: {{ }}, {% %} for variables, conditionals, and macros in SQL models.
+Document models using schema.yml with column descriptions and generate docs with dbt docs generate.",Not Started,
+dbt,Competent,"Can independently design a dbt project with proper layering, testing, and documentation. Understands incremental models, macros, and performance trade-offs. Thinks about maintainability before adding complexity.","Implement incremental models with is_incremental() logic for large datasets; choose appropriate materialisations per model.
+Write reusable macros for repeated logic (e.g., date formatting, surrogate key generation) and organise in a macros folder.
+Structure a project with clear staging → intermediate → marts layering following dbt best practices.
+Add data tests (singular and generic) covering business logic; interpret test failures to diagnose upstream issues.",Not Started,
+dbt,Proficient," Intuitively recognises when models need refactoring, abstraction, or consolidation. Anticipates how model changes cascade downstream. Designs projects that scale across teams and use cases.","Refactor a messy dbt project into a well-layered architecture; eliminate redundant models and consolidate logic.
+Build and publish a dbt package for shared logic across projects (e.g., a healthcare utilities package).
+Implement advanced patterns: ephemeral models, dynamic table configurations, and environment-specific overrides.
+Lead a dbt code review — assess model design, test coverage, documentation, and performance.",Not Started,
+dbt,Expert,Deep mastery of dbt's architecture and extensibility. Designs transformation frameworks adopted across organisations. Creates novel patterns and influences dbt community practices.,"Architect a multi-project dbt setup (core + domain-specific projects) with shared packages and governance.
+Develop custom dbt adapters or plugins for non-standard data platforms.
+Establish organisation-wide dbt standards: naming conventions, testing thresholds, CI/CD integration, and model ownership.
+Mentor proficient practitioners on advanced dbt patterns and contribute to the dbt community (packages, blog posts, Slack).",Not Started,
+Cloud Data Warehousing,Novice,Understands the concept of a cloud data warehouse versus a local database. Can perform basic navigation and run simple queries in a managed environment following explicit instructions.,"Complete an introductory module on a major cloud warehouse (e.g., BigQuery, Snowflake, or Redshift) to understand the console interface.
+Learn the core concepts: compute vs. storage separation, virtual warehouses/clusters, and on-demand pricing models.
+Load a sample dataset (CSV/JSON) into the cloud warehouse using the UI or basic CLI commands.
+Execute basic SELECT queries and understand how to monitor query history and basic costs.",Not Started,
+Cloud Data Warehousing,Advanced Beginner,Can manage basic data loading/unloading and understand partitioning/clustering concepts. Recognises that data placement affects cost and performance but relies on defaults.,"Practice loading data from cloud storage (S3, GCS, Azure Blob) using COPY commands or automated connectors.
+Create tables with basic partitioning (by date) and clustering (by ID) to improve query efficiency.
+Learn to unload/query results back to cloud storage or local files.
+Understand and apply basic access controls (roles, grants) to secure data at the schema/table level.",Not Started,
+Cloud Data Warehousing,Competent,Can design schemas optimized for cloud performance and cost. Independently troubleshoots query performance issues and manages data lifecycle policies.,"Design a schema with appropriate partitioning and clustering strategies for a specific business domain (e.g., time-series healthcare data).
+Implement data lifecycle policies (retention, expiration, archival) to manage storage costs automatically.
+Analyze query execution plans to identify bottlenecks (e.g., full table scans, data skew) and optimize SQL accordingly.
+Configure and manage secure data sharing mechanisms (e.g., Snowflake Secure Data Sharing, BigQuery Authorized Views).",Not Started,
+Cloud Data Warehousing,Proficient," Intuitively balances cost, performance, and security trade-offs. Anticipates scaling needs and designs architectures that handle massive data volumes efficiently.","Architect a multi-environment setup (Dev, Staging, Prod) with isolated compute resources and cost budgets/alerts.
+Implement advanced optimization techniques (e.g., materialized views, search optimization, result caching) for high-concurrency workloads.
+Evaluate and select the right warehouse engine (e.g., Snowflake vs. BigQuery vs. Redshift) based on specific workload patterns.
+Automate infrastructure provisioning and configuration using Infrastructure-as-Code (e.g., Terraform, CloudFormation).",Not Started,
+Cloud Data Warehousing,Expert,"Has deep mastery of cloud warehouse internals. Architects enterprise-scale data platforms, optimizes for extreme scale/cost, and establishes governance standards.","Design a multi-cloud or hybrid data architecture that integrates seamlessly with on-premise systems.
+Lead complex migration projects from legacy on-premise systems to cloud warehouses with zero downtime.
+Develop and enforce enterprise-wide data governance, security, and cost-optimization frameworks.
+Contribute to cloud provider beta programs or community best practices; mentor teams on advanced platform capabilities.",Not Started,
+Data Quality & Testing,Novice,"Understands that data can be wrong and can run basic manual checks. Views data quality as ""does it look right?"" rather than a systematic process.","1. Learn the core concepts of data quality: accuracy, completeness, consistency, and timeliness.
+2. Perform manual spot-checks on datasets using SQL COUNT, DISTINCT, and visual inspection.
+3. Run basic dbt schema tests (unique, not_null) on a simple model to see how failures are reported.
+4. Document observed data anomalies in a simple log or spreadsheet without a formal process.",Later Stages,"1. Completed
+2. Started
+3. "
+Data Quality & Testing,Advanced Beginner,"Can define and implement standard data tests. Recognises common data quality issues (nulls, duplicates) and applies learned patterns to fix them.","Configure and run standard dbt tests (accepted_values, relationships) to enforce business rules.
+Write custom singular tests (SQL queries returning rows) to catch specific anomalies (e.g., negative prices).
+Implement basic data profiling scripts (using pandas-profiling or great_expectations) to generate summary statistics.
+Set up alerts for test failures (e.g., email notifications via CI/CD or Slack webhooks).",Not Started,
+Data Quality & Testing,Competent,Can design a comprehensive testing strategy covering the entire data pipeline. Understands the trade-off between test coverage and performance.,"Design a layered testing strategy: schema tests (structure), data tests (logic), and freshness tests (timeliness).
+Implement data quality gates in the CI/CD pipeline to block deployments if critical tests fail.
+Create custom macros or Python tests for complex business logic validation (e.g., ""total revenue must equal sum of line items"").
+Monitor data quality metrics over time to identify trends (e.g., increasing null rates) and trigger proactive investigations.",Not Started,
+Data Quality & Testing,Proficient,Intuitively anticipates where data quality will break. Designs self-healing or resilient systems. Balances strictness with usability for downstream consumers.,"Implement anomaly detection algorithms (statistical or ML-based) to flag unexpected shifts in data distributions automatically.
+Design ""soft"" vs. ""hard"" failure policies: warn on minor issues, block on critical ones.
+Build a data quality dashboard that tracks SLAs, test pass rates, and data freshness for stakeholders.
+Lead root cause analysis sessions for recurring data quality incidents to prevent recurrence.",Not Started,
+Data Quality & Testing,Expert," Establishes organisational data quality culture and standards. Architects automated, scalable quality frameworks that adapt to changing data landscapes.","Define and enforce enterprise-wide data quality standards, SLAs, and governance policies.
+Architect a unified data quality platform integrating testing, monitoring, and remediation across multiple tools (dbt, Great Expectations, Soda, etc.).
+Develop novel testing methodologies for emerging data types (e.g., unstructured text, geospatial, real-time streams).
+Mentor teams on data quality philosophy and lead initiatives to shift quality left (testing earlier in the pipeline).",Not Started,
+Data Pipelines,Novice,"Understands the concept of an automated pipeline (Extract, Load, Transform). Can manually trigger a sequence of tasks but lacks understanding of scheduling or dependency management.","1. Learn the ELT vs. ETL distinction and where dbt fits in the modern stack.
+2. Manually execute a sequence of scripts (SQL load → Python transform → dbt run) in the correct order.
+3. Understand the concept of a ""cron job"" and set up a simple scheduled task on a local machine.
+4. Identify the difference between a ""source"" (raw data) and a ""target"" (analytics-ready data).",Early Progress,"1. Started - in dbt training
+2. Started - using a Python load script daily in a mini ETL pipeline personal project.
+3. Not started
+4. Completed"
+Data Pipelines,Advanced Beginner,Can configure a basic scheduler to run pipelines automatically. Understands dependencies (Task B waits for Task A) but struggles with error handling or retries.,"Set up a basic DAG (Directed Acyclic Graph) in a tool like Apache Airflow or Prefect to chain tasks.
+Configure retry logic and basic alerting (email/Slack) for failed tasks.
+Manage environment variables and secrets securely within the orchestration tool.
+Monitor pipeline runs via a UI dashboard to verify successful completion.",Not Started,
+Data Pipelines,Competent," Can design robust, fault-tolerant pipelines. Handles complex dependencies, backfills, and partial failures. Understands idempotency and data consistency.","Design idempotent pipelines that can be re-run safely without duplicating data.
+Implement backfill strategies to process historical data without disrupting current operations.
+Handle partial failures gracefully (e.g., skip non-critical tasks, alert on critical ones) using conditional logic.
+Integrate external triggers (e.g., file arrival in S3, webhook) to start pipelines dynamically.",Not Started,
+Data Pipelines,Proficient,"Anticipates scaling bottlenecks and optimizes pipeline performance. Designs systems that are observable, maintainable, and cost-effective.","Optimize DAG execution time by parallelizing independent tasks and managing resource pools.
+Implement comprehensive observability (logging, tracing, metrics) to debug complex pipeline issues.
+Design multi-environment pipelines (Dev/Staging/Prod) with automated promotion and rollback capabilities.
+Evaluate and select the right orchestration tool (Airflow, Dagster, Prefect, Mage) based on team needs and tech stack.",Not Started,
+Data Pipelines,Expert,Architects enterprise-scale orchestration frameworks. Solves complex distributed system challenges and establishes standards for reliability and efficiency.,"Architect a unified orchestration layer managing hundreds of pipelines across multiple data domains.
+Implement advanced patterns like dynamic DAG generation, event-driven architectures, and real-time stream processing integration.
+Lead disaster recovery planning and execute failover strategies for critical data pipelines.
+Mentor teams on orchestration best practices and contribute to the open-source community or industry standards.",Not Started,
+Software Engineering,Novice,"Understands the concept of Continuous Integration and Deployment as ""automated saving and publishing."" Can manually trigger a build but relies on pre-configured templates.","Learn the core concepts: CI (Continuous Integration), CD (Continuous Deployment/Delivery), and the build-test-release cycle.
+Set up a basic GitHub Actions workflow (.yml file) to run a simple command (e.g., echo ""Hello"") on every push.
+Configure a workflow to run a basic linter (e.g., sqlfluff or black) on code changes.
+Understand the difference between a ""workflow run,"" a ""job,"" and a ""step"" in a CI/CD pipeline.",Not Started,
+Software Engineering,Advanced Beginner,Can configure pipelines to run tests and deploy to a staging environment. Understands the need for automated testing before deployment but struggles with complex branching logic.,"Create a CI pipeline that runs unit tests and dbt tests on Pull Requests before allowing a merge.
+Set up a CD pipeline to automatically deploy code to a staging environment upon merging to a develop branch.
+Manage secrets (API keys, database credentials) using the CI/CD tool's secret manager, not hardcoded in files.
+Configure environment-specific variables (e.g., different database URLs for Dev vs. Prod) within the pipeline.",Not Started,
+Software Engineering,Competent,Designs robust CI/CD workflows that ensure code quality and safe deployments. Implements automated rollbacks and understands the implications of deployment strategies.,"Implement a ""Blue-Green"" or ""Canary"" deployment strategy to minimize risk during production releases.
+Add automated database migration steps (e.g., dbt run --full-refresh or schema changes) to the deployment pipeline.
+Configure automated rollback triggers if health checks or smoke tests fail post-deployment.
+Enforce branch protection rules that require passing CI checks and code review approvals before merging to main.",Not Started,
+Software Engineering,Proficient, Optimizes pipeline performance and reliability. Anticipates failure modes and designs self-healing systems. Balances speed of delivery with stability.,"Optimize CI/CD run times by parallelizing jobs, caching dependencies, and using matrix builds.
+Implement ""Infrastructure as Code"" (IaC) within the pipeline to provision and tear down temporary test environments.
+Design a ""GitOps"" workflow where infrastructure and application state are declared in code and synced automatically.
+Conduct chaos engineering experiments (e.g., injecting failures) to test pipeline resilience and recovery procedures.",Not Started,
+Software Engineering,Expert,"Architects enterprise-grade CI/CD ecosystems. Establishes organizational standards for DevOps culture, security, and compliance. Solves complex multi-team coordination challenges.","Architect a centralized CI/CD platform serving multiple teams with standardized templates and governance.
+Implement advanced security scanning (SAST, DAST, dependency vulnerability checks) integrated deeply into the pipeline.
+Lead the migration from legacy deployment methods to modern, automated, immutable infrastructure patterns.
+Define and enforce compliance-as-code policies (e.g., GDPR, HIPAA) that automatically block non-compliant deployments.",Not Started,
+Python,Novice,Understands basic Python syntax and can write simple scripts to manipulate data files. Views Python as a calculator or text processor rather than a programming language.,"1. Complete a Python basics course (e.g., ""Python for Everybody"" or Coursera's ""Python for Data Science"") covering variables, loops, and functions.
+2. Learn to read/write CSV and JSON files using the built-in csv and json libraries.
+3. Write simple scripts to filter, sort, and transform data rows based on basic conditions.
+4. Install and import external libraries (e.g., pandas, requests) using pip and virtual environments.",Early Progress,"1. Completed Python for Everybody, and completed Data Science in Python (Introduction).
+2. using the build in csv library to read csv. Need practice with JSON files.
+3. Started but with a lot of help.
+4. Frequently using pandas and Numpy but need further understanding of pip and cirtual environments.
+"
+Python,Advanced Beginner,Can use pandas for basic data manipulation and interact with APIs. Recognises common data cleaning patterns but relies on tutorials for complex transformations.,"Master pandas DataFrames: filtering, grouping, merging, and handling missing values (dropna, fillna).
+Write scripts to fetch data from public APIs using the requests library and parse JSON responses into DataFrames.
+Perform basic data cleaning: type conversion, string manipulation, and date parsing.
+Connect Python scripts to a SQL database using sqlalchemy or psycopg2 to read/write data.",Not Started,
+Python,Competent, Can build robust ETL scripts with error handling and logging. Understands object-oriented programming (OOP) basics and can structure code for reusability.,"Write modular Python scripts with custom functions and classes to encapsulate transformation logic.
+Implement error handling (try/except) and logging (logging module) to track script execution and failures.
+Use pandas for complex transformations: pivoting, melting, multi-indexing, and applying custom functions.
+Schedule and automate Python scripts using cron (Linux/Mac) or Task Scheduler (Windows) for recurring data loads.",Not Started,
+Python,Proficient,"Designs efficient, scalable data pipelines. Anticipates memory constraints and optimizes code for performance. Integrates Python seamlessly with orchestration tools.","Optimize pandas operations for large datasets (e.g., chunking, using dtype optimization, avoiding apply loops).
+Build custom Python operators for orchestration tools (e.g., Airflow, Prefect) to handle complex logic.
+Implement streaming data processing using libraries like polars or dask for out-of-core computation.
+Write unit tests (pytest) for data transformation logic to ensure reliability and prevent regressions.",Not Started,
+Python,Expert,"Architects complex data engineering systems using Python. Creates reusable frameworks, contributes to open-source libraries, and solves novel performance challenges.","Design and maintain a custom Python library or framework for internal data engineering standards.
+Contribute to open-source data engineering projects (e.g., pandas, airflow, dbt-python) or publish technical articles.
+Solve extreme-scale performance bottlenecks using Cython, Numba, or distributed computing clusters.
+Mentor teams on Python best practices, code review standards, and architectural patterns for data pipelines.",Not Started,
+Domain Expertise,Novice,Understands basic healthcare terminology and data types. Recognises that healthcare data is sensitive and regulated but lacks depth in specific systems or standards.,"1. Learn core healthcare data concepts: patient records, episodes, procedures, diagnoses, and outcomes.
+2. Study major coding systems: ICD-10 (diagnoses), OPCS-4 (procedures), SNOMED CT (clinical terms).
+3. Understand GDPR, HIPAA, and NHS data protection requirements for handling patient information.
+4. Review sample NHS datasets (e.g., HES, SUS, CDS) to understand structure and sensitivity levels.",Early Progress,"1. Completed
+2. Started"
+Domain Expertise,Advanced Beginner,Can navigate common healthcare data schemas and understand data lineage. Recognises clinical vs. administrative data distinctions and applies basic anonymisation techniques.,"Map common healthcare data flows: referral → admission → treatment → discharge → follow-up.
+Learn to identify and apply pseudonymisation/anonymisation techniques for patient data.
+Understand NHS data models: SPINE, GP2GP, and local system integrations (e.g., SystmOne, Epic).
+Practice writing SQL queries on healthcare datasets with appropriate privacy safeguards.",Not Started,
+Domain Expertise,Competent,"Can design analytics models specific to healthcare use cases. Understands clinical pathways, quality metrics, and regulatory reporting requirements.","Design dimensional models for healthcare analytics: patient journeys, episode-based reporting, outcome tracking.
+Implement healthcare-specific metrics: waiting times, readmission rates, mortality indices, quality indicators.
+Navigate NHS Digital data access frameworks and apply for approved dataset access.
+Build data quality checks specific to healthcare (e.g., valid diagnosis codes, consistent date sequences).",Not Started,
+Domain Expertise,Proficient,"Anticipates healthcare data challenges (missing data, coding changes, system migrations). Designs systems that accommodate clinical nuance and regulatory shifts.","Handle healthcare data complexities: SCD Type 2 for patient demographics, versioned coding systems, and historical mappings.
+Design real-time or near-real-time pipelines for clinical dashboards (e.g., bed occupancy, theatre utilisation).
+Implement audit trails and data lineage tracking for regulatory compliance and clinical governance.
+Collaborate with clinical stakeholders to translate medical questions into data specifications.",Not Started,
+Domain Expertise,Expert,Establishes healthcare data standards and governance frameworks. Leads cross-organisational data initiatives and influences national data policy.,"Architect enterprise-wide healthcare data platforms integrating multiple systems (primary, secondary, social care).
+Lead national or regional data standardisation initiatives (e.g., common data models, interoperability frameworks).
+Advise on healthcare data ethics, consent models, and public trust in data usage.
+Publish research or contribute to NHS Digital/industry standards on healthcare analytics best practices.",Not Started,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
