@@ -1,5 +1,7 @@
 # San's Learning Pipeline
 
+![San's-Learning-Pipeline] (images/Analytics Engineering Portfolio Project.png)
+
 A personal Analytics Engineering portfolio project tracking daily learning progress against the Benner Model (Novice to Expert).
 
 This project demonstrates an end-to-end analytics engineering workflow using a personal learning dataset.
