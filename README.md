@@ -9,7 +9,7 @@ This project demonstrates an end-to-end analytics engineering workflow using a p
 Daily learning activities are recorded in Excel, exported to CSV, loaded into PostgreSQL using Python, validated through staging tables, transformed into analytical structures, and prepared for reporting and analysis.
 
 ## Goal
-Develop skills that support a transition from Senior Nurse Leader to Healthcare Analytics/Data Engineer.
+Expand an established senior healthcare leadership skillset with modern data engineering and analytics capabilities to drive evidence-based improvement, operational insight, and strategic decision-making.
 
 ## Architecture
 This project implements a 3-layer data warehouse pattern:
